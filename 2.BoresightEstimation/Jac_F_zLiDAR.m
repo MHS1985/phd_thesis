@@ -1,0 +1,3 @@
+function T = Jac_F_zLiDAR(r, p, h, dr, dp, dh, a, b, c)
+    T = c*(sin(p)*(sin(dh)*sin(dr) - cos(dh)*cos(dr)*sin(dp)) - cos(p)*sin(r)*(cos(dh)*sin(dr) + cos(dr)*sin(dh)*sin(dp)) + cos(dp)*cos(dr)*cos(p)*cos(r)) - a*((cos(dh)*sin(dr) + cos(dr)*sin(dh)*sin(dp))*(cos(r)*sin(h) + cos(h)*sin(p)*sin(r)) + cos(h)*cos(p)*(sin(dh)*sin(dr) - cos(dh)*cos(dr)*sin(dp)) + cos(dp)*cos(dr)*(sin(h)*sin(r) - cos(h)*cos(r)*sin(p))) - b*((cos(dh)*sin(dr) + cos(dr)*sin(dh)*sin(dp))*(cos(h)*cos(r) - sin(h)*sin(p)*sin(r)) - cos(p)*sin(h)*(sin(dh)*sin(dr) - cos(dh)*cos(dr)*sin(dp)) + cos(dp)*cos(dr)*(cos(h)*sin(r) + cos(r)*sin(h)*sin(p)));
+end

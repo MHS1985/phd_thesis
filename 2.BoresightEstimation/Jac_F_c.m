@@ -1,0 +1,3 @@
+function T = Jac_F_c(r, p, dr, dp, dh, xLiDAR, yLiDAR, zLiDAR, PzLGF, axINS, ayINS, azINS)
+    T = PzLGF + zLiDAR*(sin(p)*(sin(dh)*sin(dr) - cos(dh)*cos(dr)*sin(dp)) - cos(p)*sin(r)*(cos(dh)*sin(dr) + cos(dr)*sin(dh)*sin(dp)) + cos(dp)*cos(dr)*cos(p)*cos(r)) - xLiDAR*(cos(dh)*cos(dp)*sin(p) + cos(p)*cos(r)*sin(dp) + cos(dp)*cos(p)*sin(dh)*sin(r)) - axINS*sin(p) + yLiDAR*(cos(p)*sin(r)*(cos(dh)*cos(dr) - sin(dh)*sin(dp)*sin(dr)) - sin(p)*(cos(dr)*sin(dh) + cos(dh)*sin(dp)*sin(dr)) + cos(dp)*cos(p)*cos(r)*sin(dr)) + azINS*cos(p)*cos(r) + ayINS*cos(p)*sin(r);
+end 
